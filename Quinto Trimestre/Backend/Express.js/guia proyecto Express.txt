@@ -26,4 +26,4 @@ PASOS PARA INICIALIZAR UN PROYECTO DE NODE.JS CON EXPRESS Y NODEMON
        "test": "echo \"Error: no test specified\" && exit 1",
        "start": "node app.js",
        "dev": "nodemon app.js"
-     }
+     },
