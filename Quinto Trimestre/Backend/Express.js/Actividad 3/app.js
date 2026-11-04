@@ -23,11 +23,13 @@ conectar.connect((error)=>{
     }
 })
 app.post("/usuarios", (req, res) => {
-    const { nombre, apellido, direccion, telefono } = req.body; 
-        if(nombre && apellido && direccion && telefono)
+    const { nombreProducto, categoria, precio,cantidadDisponible} = req.body; 
+        if (!nombreProducto || !categoria || !precio || !cantidadDisponible) {
+        return res.status(400).json({ mensaje: "Error: Faltan datos obligatorios" });
+    }
     conectar.query(
-        "INSERT INTO usuarios(nombre, apellido, Direccion, telefono) VALUES (?, ?, ?, ?)",
-        [nombre, apellido, direccion, telefono],
+        "INSERT INTO usuarios(nombreProducto, categoria, precio,cantidadDisponible) VALUES (?, ?, ?, ?)",
+        [ nombreProducto, categoria, precio,cantidadDisponible],
         (error, resultado) => {
             if (error) {
                 console.error("Error MySQL:", error.message);

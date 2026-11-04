@@ -48,7 +48,6 @@ app.get("/usuarios",(req,res)=>{
             return res.json({"mensaje": "error al traer datos de usuario"})
         } else { return res.json(resultados)}
     })
-
 })
 
 

@@ -1,0 +1,19 @@
+INSTALACIÓN DE REACT-ROUTER-DOM
+
+1. Abrir Visual Studio Code y cargar el proyecto React.
+
+2. Abrir la terminal desde el menú Terminal → Nueva terminal.
+
+3. Verificar que la terminal esté ubicada en la carpeta del proyecto, donde se encuentra el archivo package.json.
+
+4. Ejecutar el siguiente comando:
+
+npm install react-router-dom
+
+5. Esperar a que finalice la instalación.
+
+6. Verificar la instalación ejecutando:
+
+npm list react-router-dom
+
+7. Si aparece el nombre de la librería con su versión, la instalación se realizó correctamente.
