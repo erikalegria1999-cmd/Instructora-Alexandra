@@ -20,6 +20,19 @@
             </li>
             <Link to= "/contacto">Contacto</Link>
             </ul>
+            <ul>
+                <Link to = "/bienvenido">bienvenido</Link>
+                
+            
+
+            </ul>
+            <ul>
+                <Link to = "/hola">Hola</Link>
+            </ul>
+            
+            
+            
+        
         </nav>
         </div>
     );

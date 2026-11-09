@@ -1,8 +1,14 @@
 const express = require("express")
 const cors = require("cors")
 const mysql = require("mysql2")
+
 const app = express()
 const PORT = 2000
+
+let router = require("./routes/PruebaRoutes")
+let rutaGuardar = require("./routes/GuardarRoutes")
+let rutaUsuarios = require("./routes/UsuariosRoute")
+
 
 app.use(cors())
 app.use(express.json())
@@ -24,9 +30,11 @@ conectar.connect((error)=>{
         console.log("conexion realizada")
     }
 })
-app.get("/prueba",(req,res)=>{
-    res.json({"Mensjae:": "Esto es una prueba"})
-})
+
+app.use("/api", router)
+app.use("/apiGuardar",  rutaGuardar)
+app.use("apiUser", rutaUsuarios)
+
 app.post("/guardar",(req,res)=>{
     const {nombre, edad} = req.body
     res.json({"mensaje": "Datos Recibidos: " + nombre + " " + edad})

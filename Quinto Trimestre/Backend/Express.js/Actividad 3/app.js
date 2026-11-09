@@ -22,11 +22,20 @@ conectar.connect((error)=>{
         console.log("conexion realizada")
     }
 })
+app.get("/bienvenida",(req,res)=>{
+    res.json ({"mensaje":"bienvenido"})
+})
+
+app.get("/hola",(req,res)=>{
+    res.json({"mensaje":"hola profe"})
+})
+
 app.post("/usuarios", (req, res) => {
     const { nombreProducto, categoria, precio,cantidadDisponible} = req.body; 
         if (!nombreProducto || !categoria || !precio || !cantidadDisponible) {
         return res.status(400).json({ mensaje: "Error: Faltan datos obligatorios" });
     }
+
     conectar.query(
         "INSERT INTO usuarios(nombreProducto, categoria, precio,cantidadDisponible) VALUES (?, ?, ?, ?)",
         [ nombreProducto, categoria, precio,cantidadDisponible],

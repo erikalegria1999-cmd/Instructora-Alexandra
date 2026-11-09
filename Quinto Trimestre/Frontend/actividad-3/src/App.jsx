@@ -8,6 +8,9 @@ import Registro from "./Registro"
 import Login from "./Login"
 import Producto from "./Producto"
 import Contacto from "./Contacto"
+import Hola from "./Hola"
+import Bienvenido from "./Bienvenido"
+
 function App() {
 
     return (
@@ -24,6 +27,9 @@ function App() {
                     ></Route>
                     <Route path="/contacto" element={<Contacto></Contacto>} 
                     ></Route>
+                    <Route path= "/bienvenido" element={<Bienvenido></Bienvenido>}></Route>
+                    <Route path= "/Hola" element={<Hola></Hola>}></Route>
+
                 </Route>
             </Routes>
         </BrowserRouter>
