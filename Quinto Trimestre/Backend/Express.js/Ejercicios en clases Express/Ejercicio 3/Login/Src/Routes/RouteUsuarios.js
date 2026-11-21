@@ -5,5 +5,5 @@ const Usuario = new UsuarioControllers()
 
 rutaUsuarios.get("/verUsuario",Usuario.VerUsuarios)
 rutaUsuarios.post("/actualizarUsuario",Usuario.ActualizarUsuario)
-
+rutaUsuarios.delete("/Eliminar",Usuario.EliminarUsuario)
 module.exports = rutaUsuarios

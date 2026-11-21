@@ -1,2 +1,18 @@
+1. Instalación
 npm install bcrypt
 
+2. Ejercicio Práctico
+const bcrypt = require('bcrypt');
+async function probarBcrypt() {
+    const password = "MiPassword123";    
+    // 1. Generar hash
+    const hash = await bcrypt.hash(password, 10);
+    console.log("Hash:", hash);
+    // 2. Verificar contraseña correcta
+    const esValida = await bcrypt.compare("MiPassword123", hash);
+    console.log("¿Contraseña correcta?:", esValida); // true
+    // 3. Verificar contraseña incorrecta
+    const esInvalida = await bcrypt.compare("MalPassword", hash);
+    console.log("¿Contraseña incorrecta?:", esInvalida); // false
+}
+probarBcrypt();

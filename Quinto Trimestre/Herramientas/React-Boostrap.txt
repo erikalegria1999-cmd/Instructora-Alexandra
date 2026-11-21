@@ -12,4 +12,3 @@ INSTALACIÓN DE BOOTSTRAP EN REACT
 
      import 'bootstrap/dist/css/bootstrap.min.css';
 
-```
