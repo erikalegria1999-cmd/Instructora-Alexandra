@@ -1,0 +1,13 @@
+# 1. Inicializar proyecto (si aun no tienes package.json)
+npm init -y
+
+# 2. Instalar dotenv y sequelize (mas el driver de tu base de datos)
+# Para MySQL / MariaDB:
+npm install dotenv sequelize mysql2
+
+# (Otras bases de datos)
+# PostgreSQL: npm install dotenv sequelize pg pg-hstore
+# SQLite:     npm install dotenv sequelize sqlite3
+
+# 3. Opcional: CLI de Sequelize (para migraciones y seeders)
+npm install --save-dev sequelize-cli
